@@ -1,0 +1,133 @@
+﻿@model wardrobe.Models.Bottom
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Bottom</h4>
+    <hr />
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">@Html.DisplayNameFor(model => model.Name)</h3>
+        </div>
+        <div class="panel-body">
+            @Html.DisplayFor(model => model.Name)
+        </div>
+    </div>
+
+
+    <div class="ViewPic">
+        <div class="container-fluid">
+            @if (Model.Photo == "1")
+            {
+                <img src = "/Content/shorts.jpg" />
+            }
+            else if (Model.Photo == "2")
+            {
+                <img src = "/Content/dress pant.jpg" />
+            }
+            else if (Model.Photo == "3")
+            {
+                <img src = "/Content/baggy pants.jpg" />
+            }
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">@Html.DisplayNameFor(model => model.Type)</h3>
+        </div>
+        <div class="panel-body">
+            @Html.DisplayFor(model => model.Type)
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">@Html.DisplayNameFor(model => model.Color)</h3>
+        </div>
+        <div class="panel-body">
+            @Html.DisplayFor(model => model.Color)
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">@Html.DisplayNameFor(model => model.Season)</h3>
+        </div>
+        <div class="panel-body">
+            @Html.DisplayFor(model => model.Season)
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">@Html.DisplayNameFor(model => model.Occasion)</h3>
+        </div>
+        <div class="panel-body">
+            @Html.DisplayFor(model => model.Occasion)
+        </div>
+    </div>
+</div>
+    
+    
+    
+    @*<dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Photo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Photo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Color)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Color)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Season)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Season)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Occasion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Occasion)
+        </dd>
+
+    </dl>*@
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BottomID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
